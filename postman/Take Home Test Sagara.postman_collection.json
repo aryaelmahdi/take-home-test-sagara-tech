@@ -1,0 +1,794 @@
+{
+	"info": {
+		"_postman_id": "a3fe29e2-35c9-4132-b7f8-69a5ffe3a463",
+		"name": "Take Home Test Sagara",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29105484",
+		"_collection_link": "https://ismi99.postman.co/workspace/ISMI-Workspace~42bd5895-f141-4d8f-a692-a34c137cffe9/collection/29105484-a3fe29e2-35c9-4132-b7f8-69a5ffe3a463?action=share&source=collection_link&creator=29105484"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register Admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"arya\",\r\n    \"email\":\"arya@gmail.com\",\r\n    \"password\":\"prabarya\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/admin/auth/register",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\":\"arya\",\r\n    \"email\":\"arya@gmail.com\",\r\n    \"password\":\"prabarya\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/admin/auth/register",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admin",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 26 Oct 2025 14:51:19 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "288"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User registered successfully\",\n    \"user\": {\n        \"email\": \"arya@gmail.com\",\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE3NjE0OTc0NzksImlkIjozLCJyb2xlX25hbWUiOiJ1c2VyIiwidXNlcm5hbWUiOiJhcnlhQGdtYWlsLmNvbSJ9.WskiM4urf8sQpziNaCdldLMyYPzKPQF7g_jbIcuYSgE\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Register User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"arya\",\r\n    \"email\":\"arya.user@gmail.com\",\r\n    \"password\":\"prabarya\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/auth/register",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\":\"arya\",\r\n    \"email\":\"arya.user@gmail.com\",\r\n    \"password\":\"prabarya\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/auth/register",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 26 Oct 2025 14:54:32 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "300"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User registered successfully\",\n    \"user\": {\n        \"email\": \"arya.user@gmail.com\",\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE3NjE0OTc2NzIsImlkIjo0LCJyb2xlX25hbWUiOiJ1c2VyIiwidXNlcm5hbWUiOiJhcnlhLnVzZXJAZ21haWwuY29tIn0.iNqASMhdXIzUmRnmsF0bJYFxP4ed4qiWibPmYoKfF9k\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"arya.user@gmail.com\",\r\n    \"password\":\"prabarya\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"arya@gmail.com\",\r\n    \"password\":\"prabarya\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/auth/login",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 26 Oct 2025 14:48:54 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "276"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Login successful\",\n    \"user\": {\n        \"email\": \"arya@gmail.com\",\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE3NjE0OTczMzQsImlkIjoxLCJyb2xlX25hbWUiOiJ1c2VyIiwidXNlcm5hbWUiOiJhcnlhQGdtYWlsLmNvbSJ9.i8h6P5bjKY8BntesWAqQPLiCJgvc4SiUk_IvVqwwPis\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Fields",
+			"item": [
+				{
+					"name": "Create Field",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE3NjE0OTkyNzUsImlkIjo1LCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImFyeWFAZ21haWwuY29tIn0.vD0o51Z89BEgCvKw2uYVtGkzmjz3uagpTrDANY9t7oQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Lapangan C\",\r\n    \"price_per_hour\":100000,\r\n    \"location\":\"Bandung\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/fields",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"fields"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Lapangan B\",\r\n    \"price_per_hour\":100000,\r\n    \"location\":\"Jakarta\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/fields",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"fields"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 26 Oct 2025 15:21:30 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "128"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"field\": {\n        \"field_id\": 2,\n        \"location\": \"Jakarta\",\n        \"name\": \"Lapangan B\",\n        \"price_per_hour\": 100000\n    },\n    \"message\": \"Field created successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Fields",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE3NjE0OTkyNzUsImlkIjo1LCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImFyeWFAZ21haWwuY29tIn0.vD0o51Z89BEgCvKw2uYVtGkzmjz3uagpTrDANY9t7oQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/fields",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"fields"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/fields",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"fields"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 26 Oct 2025 15:22:10 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "223"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 2,\n    \"fields\": [\n        {\n            \"field_id\": 1,\n            \"location\": \"Bandung\",\n            \"name\": \"Lapangan A\",\n            \"price_per_hour\": 50000\n        },\n        {\n            \"field_id\": 2,\n            \"location\": \"Jakarta\",\n            \"name\": \"Lapangan B\",\n            \"price_per_hour\": 100000\n        }\n    ],\n    \"message\": \"Fields retrieved successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Fields by ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE3NjE0OTkyNzUsImlkIjo1LCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImFyeWFAZ21haWwuY29tIn0.vD0o51Z89BEgCvKw2uYVtGkzmjz3uagpTrDANY9t7oQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/fields/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"fields",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/fields/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"fields",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 26 Oct 2025 15:22:51 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "129"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"field\": {\n        \"field_id\": 1,\n        \"location\": \"Bandung\",\n        \"name\": \"Lapangan A\",\n        \"price_per_hour\": 50000\n    },\n    \"message\": \"Field retrieved successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Field",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE3NjE0OTkyNzUsImlkIjo1LCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImFyeWFAZ21haWwuY29tIn0.vD0o51Z89BEgCvKw2uYVtGkzmjz3uagpTrDANY9t7oQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Lapangan A\",\r\n    \"price_per_hour\":500000,\r\n    \"location\":\"Surabaya\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/fields/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"fields",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Lapangan A\",\r\n    \"price_per_hour\":500000,\r\n    \"location\":\"Surabaya\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/fields/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"fields",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 26 Oct 2025 15:24:25 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "129"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"field\": {\n        \"field_id\": 1,\n        \"location\": \"Surabaya\",\n        \"name\": \"Lapangan A\",\n        \"price_per_hour\": 500000\n    },\n    \"message\": \"Field updated successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Field",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE3NjE0OTkyNzUsImlkIjo1LCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImFyeWFAZ21haWwuY29tIn0.vD0o51Z89BEgCvKw2uYVtGkzmjz3uagpTrDANY9t7oQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/fields/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"fields",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/fields/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"fields",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 26 Oct 2025 15:24:56 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "40"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Field deleted successfully\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Bookings",
+			"item": [
+				{
+					"name": "Create Booking",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE3NjE1MDI0NDMsImlkIjo0LCJyb2xlIjoidXNlciIsInVzZXJuYW1lIjoiYXJ5YS51c2VyQGdtYWlsLmNvbSJ9.fPZCrmNTqDwhnIUk_0BZaKdsM223jlqwuWiJ_AQDGhw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"field_id\":2,\r\n    \"booking_date\":\"2025-10-27\",\r\n    \"start_time\":\"17:00\",\r\n    \"end_time\":\"18:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/bookings",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bookings"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"field_id\":2,\r\n    \"booking_date\":\"2025-10-27\",\r\n    \"start_time\":\"16:00\",\r\n    \"end_time\":\"18:00\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/bookings",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"bookings"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 26 Oct 2025 16:43:24 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "262"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"booking\": {\n        \"booking_date\": \"2025-10-27\",\n        \"booking_id\": 7,\n        \"duration\": \"2.0 hours\",\n        \"end_time\": \"18:00\",\n        \"field_id\": 2,\n        \"field_name\": \"Lapangan B\",\n        \"location\": \"Jakarta\",\n        \"start_time\": \"16:00\",\n        \"status\": \"confirmed\",\n        \"total_price\": 200000\n    },\n    \"message\": \"Booking created successfully\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Payments",
+			"item": [
+				{
+					"name": "Create Payment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE3NjE1MDI0NDMsImlkIjo0LCJyb2xlIjoidXNlciIsInVzZXJuYW1lIjoiYXJ5YS51c2VyQGdtYWlsLmNvbSJ9.fPZCrmNTqDwhnIUk_0BZaKdsM223jlqwuWiJ_AQDGhw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"booking_id\":12\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/payments",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"payments"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"field_id\":2,\r\n    \"booking_date\":\"2025-10-27\",\r\n    \"start_time\":\"16:00\",\r\n    \"end_time\":\"18:00\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/bookings",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"bookings"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 26 Oct 2025 16:43:24 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "262"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"booking\": {\n        \"booking_date\": \"2025-10-27\",\n        \"booking_id\": 7,\n        \"duration\": \"2.0 hours\",\n        \"end_time\": \"18:00\",\n        \"field_id\": 2,\n        \"field_name\": \"Lapangan B\",\n        \"location\": \"Jakarta\",\n        \"start_time\": \"16:00\",\n        \"status\": \"paid\",\n        \"total_price\": 200000\n    },\n    \"message\": \"Payment completed successfully\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
